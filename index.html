@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Icon-->
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Calendar Features-->
+    <!-- <link href='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.4/main.min.js'></script> -->
+
+    <link rel="stylesheet" href="assets/css/styles.css" >
+    <title>Choose your cleaning visit | Bloom Cleaning </title>
+</head>
+<body>
+    <header class="calendar__header">
+        <section class="header__container">
+            <img src="assets/img/logo-bend.png" alt="Bloom Cleaning Logo" class="header__logo">
+        </section>
+        <section class="header__container">
+            <a href="#" class="goBack__button">Go Back</a>
+        </section>
+    </header>
+    <div class="container">
+        <div id="calendar"></div>
+        <div class="booking-form">
+            <h2 class="form__title">Choose your time</h2>
+            <form id="reservationForm">
+                <div class="time-slots">
+                    <button type="button" class="time-slot">8:30am</button>
+                    <button type="button" class="time-slot">9:30am</button>
+                    <button type="button" class="time-slot">10:30am</button>
+                    <button type="button" class="time-slot">11:30am</button>
+                    <button type="button" class="time-slot">12:30pm</button>
+                    <button type="button" class="time-slot">1:30pm</button>
+                    <button type="button" class="time-slot">2:30pm</button>
+                    <button type="button" class="time-slot">3:30pm</button>
+                    <button type="button" class="time-slot">4:30pm</button>
+                    <button type="button" class="time-slot">5:30pm</button>
+                </div>
+
+                <h3 class="form__inputs">Your info...</h3>
+                    <input type="text" name="firstName" placeholder="Name" required>
+                    <input type="text" name="lastName" placeholder="Last Name" required>
+                    <input type="text" name="address" placeholder="Address" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="hidden" name="selectedTime" id="selectedTime">
+                    <a href="https://square.link/u/FLqgwfAx" target="_blank"><button type="submit">Proceed to Payment</button></a>
+            </form>
+        </div>
+    </div>    
+    <script src="assets/js/main.js"></script>
+</body>
+<div class="load">
+    <div class="loader">
+        <div class="loader-inner"></div>
+    </div>
+</div> 
+</html>
