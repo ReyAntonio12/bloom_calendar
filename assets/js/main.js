@@ -48,7 +48,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 /* FORM */
-
 document.querySelectorAll('.time-slot').forEach(button => {
     button.addEventListener('click', function() {
         document.querySelectorAll('.time-slot').forEach(btn => btn.classList.remove('selected'));
@@ -57,15 +56,20 @@ document.querySelectorAll('.time-slot').forEach(button => {
     });
 });
 
-document.getElementById('reservationForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+document.getElementById('saveButton').addEventListener('click', function() {
+    const formData = new FormData(document.getElementById('reservationForm'));
+    const data = Object.fromEntries(formData.entries());
+    console.log('Data Saved:', data);
+    alert('Information sent correctly.');
+});
+
+document.getElementById('redirectButton').addEventListener('click', function() {
     const selectedTime = document.getElementById('selectedTime').value;
     if (!selectedTime) {
-        alert('Por favor, seleccione un horario.');
+        alert('Please choose a time before continuing');
         return;
     }
-    alert(`Formulario enviado con el horario: ${selectedTime}`);
-    // Aquí puedes enviar el formulario usando AJAX o un método de envío tradicional
+    window.location.href = 'https://square.link/u/FLqgwfAx';
 });
 
 
